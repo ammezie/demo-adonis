@@ -17,6 +17,11 @@
     <div class="__wrapper">
       {% block content %}{% endblock %}
 
+      <h2 style="text-align: center; margin-top: 10px">
+        {% set Env = use('Env') %}
+        Mode: {{ Env.get('NODE_ENV') }}
+      </h2>
+
       {% block footer %}
         <div class="__footer">
           <ul>
